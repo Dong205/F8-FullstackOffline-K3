@@ -1,0 +1,27 @@
+div{
+    margin-top: 16px;
+   }
+   
+   label{
+       display: inline-block;
+       vertical-align: middle;
+       width:110px;
+   }
+   .choose-info{
+       display: inline-block;
+       vertical-align: middle;
+   }
+   .choose-sign-on{
+       display: inline-block;
+       vertical-align: middle ;
+   }
+   
+   
+   form{
+       width: 300px;
+   }
+   
+   .login-item{
+       margin-top: 20px;
+       margin-left: 120px;
+   }

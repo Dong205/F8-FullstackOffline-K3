@@ -1,0 +1,57 @@
+body{
+    width: 1000px;
+    height: 1000px;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+header{
+    height: 80px;
+}
+
+header>p{
+    font-size: 30px;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 50px;
+    background-color: rgb(126, 126, 244);
+}
+
+
+
+span{
+    color: rgba(4, 212, 212, 0.756);
+}
+
+h1{
+    text-align: center;
+}
+
+main>div>p{
+    text-align: center;
+}
+
+button{
+    display: inline-block;
+    padding: 0 30px;
+    margin-top: 15px;
+    height: 55px;
+    border: none;
+    color:white;
+    background-color: black;
+    border-radius: 5px;
+}
+
+.but{
+    width: 275px;
+}
+
+.but-fixed{
+    margin-left: 10px;
+}
