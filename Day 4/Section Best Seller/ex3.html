@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 3</title>
+    <link rel="stylesheet" href="./ex3.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <main class="container">
+      <h2>Best Seller</h2>
+      <input type="radio" name="menu" id="skincare" checked />
+      <input type="radio" name="menu" id="haircare" />
+      <input type="radio" name="menu" id="cosmetics-care" />
+      <input type="radio" name="menu" id="fragrance" />
+      <input type="radio" name="menu" id="makeup" />
+      <div class="menu-tab">
+        <ul>
+          <li class="skincare"></li>
+          <label for="skincare"> Skincare </label>
+        </ul>
+        <ul>
+          <li class="haircare"></li>
+          <label for="haircare">Haircare </label>
+        </ul>
+        <ul>
+          <li class="cosmeticscases"></li>
+          <label for="cosmetics-care"> Cosmetics Cares </label>
+        </ul>
+        <ul>
+          <li class="fragrance"></li>
+          <label for="fragrance"> Fragrance </label>
+        </ul>
+        <ul>
+          <li class="makeup"></li>
+          <label for="makeup"> Makeup </label>
+        </ul>
+      </div>
+      <section class="products">
+        <div class="item-skincare">
+          <div class="image-container">
+            <img
+              class="original-img"
+              style="width: 300px"
+              src="./IMG/nha_be.png"
+              alt="Nhà cấp 4"
+            />
+            <img
+              class="hover-image"
+              style="width: 300px"
+              src="./IMG/nha_to.png"
+              alt="Nhà xây"
+            />
+          </div>
+          <div class="menu-cta">
+            <button><i class="fa-regular fa-heart"></i></button>
+            <button><i class="fa-solid fa-arrow-right-arrow-left"></i></button>
+            <button><i class="fa-solid fa-eye"></i></button>
+            <button>Add to cart</button>
+          </div>
+          <div class="info-item">
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <p class="name">Casual Shirt With Ruffle Hem</p>
+            <span class="price">112.00</span>
+          </div>
+        </div>
+
+        <div class="item-skincare">
+          <div class="image-container">
+            <img
+              class="original-img"
+              style="width: 300px"
+              src="./IMG/nha_be.png"
+              alt="Nhà cấp 4"
+            />
+            <img
+              class="hover-image"
+              style="width: 300px"
+              src="./IMG/nha_to.png"
+              alt="Nhà xây"
+            />
+          </div>
+          <div class="menu-cta">
+            <button><i class="fa-regular fa-heart"></i></button>
+            <button><i class="fa-solid fa-arrow-right-arrow-left"></i></button>
+            <button><i class="fa-solid fa-eye"></i></button>
+            <button>Add to cart</button>
+          </div>
+          <div class="info-item">
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <p class="name">Casual Shirt With Ruffle Hem</p>
+            <span class="price">112.00</span>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
