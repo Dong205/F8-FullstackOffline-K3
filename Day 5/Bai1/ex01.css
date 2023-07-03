@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Lobster&display=swap");
+
+h1 {
+  font-family: "Lobster", cursive;
+  font-size: 40px;
+  text-align: center;
+}
+p {
+  text-align: center;
+  font-family: "Lato", sans-serif;
+}
+p span {
+  font-family: "Lato", sans-serif;
+  color: red;
+}
+form {
+  text-align: center;
+}
+i {
+  padding: 15px;
+  background-color: #ddd;
+  color: white;
+  margin-top: 13px;
+}
+i[class="fas fa-comment-alt"] {
+  position: relative;
+  top: -128px;
+  height: 128px;
+}
+input {
+  width: 507px;
+  height: 42px;
+}
+textarea {
+  width: 507px;
+  height: 150px;
+
+}
+div select {
+  height: 47px;
+  width: 510px;
+}
+input[type="checkbox"] {
+  width: 22px;
+  position: relative;
+  top: 16px;
+}
+.checkbox{
+    display: flex;
+    justify-content: center;
+
+}
+.box {
+  position: relative;
+  top: -190px;
+}
+.remember {
+  font-family: "Lato", sans-serif;
+}
+button {
+  position: relative;
+  left: 216px;
+  padding: 5px 40px;
+  font-size: 20px;
+  background-color: red;
+  color: white;
+  border: none;
+}

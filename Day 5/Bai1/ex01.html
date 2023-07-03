@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 1</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./ex01.css">
+  </head>
+  <body>
+    <header class="container">
+      <div class="heading">
+        <h1>Hey there</h1>
+        <p>
+          <span>We'd like to hear from you.</span>Send us your message or just
+          say hy with our <br />
+          contact form or dicetly via phone.we love to chat.
+        </p>
+      </div>
+    </header>
+    <section class="form">
+      <form action="" method="get">
+        <div>
+          <label>
+            <i class="fas fa-user"> </i>
+            <input type="text" name="name" placeholder="Your name" />
+            <!-- <div class="title">Enter your name</div> -->
+          </label>
+        </div>
+        <div>
+          <label>
+            <i class="fas fa-envelope"></i>
+            <input type="email" name="email" placeholder="your@domain.com" />
+          </label>
+        </div>
+        <div>
+          <label>
+            <i class="fas fa-phone-alt"></i>
+            <input type="text" name="phone" placeholder="+44 00 123" />
+          </label>
+        </div>
+        <div>
+          <label>
+            <i class="far fa-folder-open"></i>
+            <select name="subject">
+              <option value="">
+                <div class="title">Subject</div>
+              </option>
+              <option value="option1">JAVA</option>
+              <option value="option1">CSS</option>
+            </select>
+          </label>
+        </div>
+        <div>
+          <label><i class="fas fa-comment-alt"></i></label>
+          <textarea
+            name="message"
+            placeholder="Message"
+            cols="30"
+            rows="10"
+          ></textarea>
+        </div>
+        <div class="checkbox">
+          <div class="remember">
+            <input type="checkbox" name="box" />Send me a coppy of this mesage
+          </div>
+          <button>SEND</button>
+        </div>
+      </form>
+    </section>
+  </body>
+</html>
