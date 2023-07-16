@@ -1,0 +1,99 @@
+@font-face {
+    font-family: Space-Grotes;
+    src: url(../../../Roboto/SpaceGrotesk-VariableFont_wght.ttf);
+  }
+  @font-face {
+    font-family: Inter;
+    src: url(../../../Roboto/Inter-VariableFont_slnt_wght.ttf);
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+  }
+  h2 {
+    font-family: Space-Grotes;
+  }
+  p {
+    font-family: Inter;
+    text-align: right;
+    opacity: 0.5;
+  }
+  .page {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+  .content {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
+  .box {
+    display: flex;
+    align-items: baseline;
+  }
+  .box > * {
+    margin: 0 10px 10px 10px;
+    display: block;
+  }
+  .left {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+  }
+  .right {
+    display: inline-flex;
+  }
+  .left > * {
+    margin: 10px;
+  }
+  .center::after {
+    content: "";
+    width: 1px;
+    height: 120px;
+    display: block;
+    background-color: #ddd;
+    position: relative;
+    left: 13.5px;
+  }
+  i {
+    color: green;
+    border-radius: 99px;
+    padding: 5px;
+    border: 1px solid green;
+  }
+  button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    opacity: 0.5;
+  }
+  .box:hover .left {
+    transform: translate(380px, 0px);
+    align-items: flex-start;
+    transition: all 1.5s linear;
+  }
+  .box:hover .left p {
+    text-align: left;
+  }
+  .box:hover .right {
+    transform: translate(-165px, 0px);
+    flex-direction: row-reverse;
+    transition: all 1.5s linear;
+  }
+  .box:hover .left button {
+    color: white;
+    background-color: #a26f5a;
+  }
+  .page .img {
+    margin-top: 10px;
+  }
+  
+  .page .img img:first-child {
+    position: relative;
+    top: 60px;
+    left: 80px;
+  }
