@@ -1,0 +1,460 @@
+/* temp */
+.hide {
+    display: none;
+  }
+  
+  /* main */
+  body {
+    width: 100%;
+    min-height: 100vh;
+    background: url(../img/bg.jpg) #615dfa 0 center / cover no-repeat;
+  }
+  main {
+    position: relative;
+    width: 90%;
+    min-height: 100vh;
+    margin: 0 auto;
+    overflow: hidden;
+  
+    @include responsive(lg) {
+      width: 484px;
+    }
+    @include responsive(xl) {
+      width: 100%;
+    }
+  }
+  h1 {
+    font-family: "Titillium Web";
+    font-weight: 900;
+  }
+  .row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+    @include responsive(xl) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+  
+      .col {
+        &:first-child {
+          flex: 0 0 50%;
+          min-height: 100vh;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          padding-right: 60px;
+        }
+        &:last-child {
+          flex: 0 0 50%;
+          padding-left: 100px;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+  .brand {
+    padding-top: 80px;
+    color: #fff;
+    text-align: center;
+  
+    @include responsive(xl) {
+      padding-top: 0;
+      margin-top: -60px;
+    }
+  
+    &__icon {
+      height: 60px;
+      margin-bottom: 36px;
+  
+      &-img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  
+    &__title {
+      text-transform: uppercase;
+      font-size: 60px;
+  
+      @include responsive(sm) {
+        font-size: 104px;
+      }
+  
+      &-sm {
+        display: block;
+        font-family: "Rajdhani";
+        font-weight: 500;
+        font-size: 24px;
+        margin-bottom: -10px;
+      }
+    }
+    &__desc {
+      display: none;
+  
+      @include responsive(xl) {
+        display: block;
+        width: 380px;
+        margin: 10px auto;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 24px;
+      }
+    }
+  }
+  .btn-box {
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+  
+    @include responsive(sm) {
+      margin-top: 50px;
+    }
+    @include responsive(xl) {
+      margin-top: 90px;
+    }
+  
+    &__btn {
+      flex: 0 0 50%;
+      font-size: 16px;
+      line-height: 52px;
+      font-weight: 700;
+      transition: background-color 0.2s ease-out;
+      text-transform: capitalize;
+      border: solid #fff;
+  
+      @include responsive(sm) {
+        flex: 0 0 180px;
+      }
+  
+      @include responsive(xl) {
+        cursor: pointer;
+      }
+  
+      &:first-child {
+        border-width: 2px 0 2px 2px;
+        border-radius: 12px 0 0 12px;
+      }
+      & + & {
+        border-width: 2px 2px 2px 0;
+        border-radius: 0 12px 12px 0;
+      }
+    }
+  }
+  .btn_checkbox#login:checked ~ .row .col .btn-box__btn[for="login"],
+  .btn_checkbox#register:checked ~ .row .col .btn-box__btn[for="register"] {
+    background-color: #fff;
+    color: $txt-black;
+    @include responsive(xl) {
+      cursor: auto;
+    }
+  }
+  .btn_checkbox#login:checked ~ .row .col .form#loginForm,
+  .btn_checkbox#register:checked ~ .row .col .form#registerForm {
+    display: block;
+    @include responsive(xl){
+      animation: fadeInRight 0.6s ease-out forwards;
+    }
+  }
+  form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 28px;
+  
+    * {
+      font-size: 14px;
+      font-weight: 700;
+    }
+  }
+  .form-wrap {
+    padding-top: 60px;
+    position: relative;
+  
+    @include responsive(sm) {
+      padding-top: 80px;
+    }
+  
+    @include responsive(xl) {
+      width: 484px;
+      min-height: 100vh;
+      padding-top: 0;
+    }
+  }
+  .form {
+    display: none;
+    position: relative;
+    padding: 40px 32px;
+    border-radius: 12px;
+    background-color: #fff;
+    color: $txt-black;
+    margin-bottom: 100px; 
+    box-shadow: 0 0 60px 0 rgba(94,92,154,.12); 
+  
+    @include responsive(sm) {
+      padding: 64px;
+    }
+    
+    @include responsive(xl) {
+      margin-bottom: 0;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      transform: translate(160%, -50%);
+      animation: fadeOutRight 0.6s ease-out forwards;
+  
+      &::before {
+        content: "";
+        position: absolute;
+        top: -80px;
+        left: -80px;
+        width: 160px;
+        height: 156px;
+        background: url(../img/img_rocket.png) 0 / 100% no-repeat;
+      }
+    }
+  
+    &__title {
+      font-size: 26px;
+      line-height: 1;
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    &__input-wrap {
+      position: relative;
+      display: block;
+      width: 100%;
+    }
+    &__input:not([type="checkbox"]) {
+      width: 100%;
+      height: 54px;
+      padding: 14px 18px;
+      border: 1px solid rgb(222, 222, 234);
+      border-radius: 12px;
+      font-size: 16px;
+      line-height: 1;
+      font-weight: 700;
+      &:focus {
+        border-color: #615dfa;
+      }
+      &:focus,
+      &:valid {
+        ~ .form__label {
+          top: -6px;
+          background-color: #fff;
+          font-size: 12px;
+        }
+      }
+    }
+    &__input[type="checkbox"] {
+      display: none;
+    }
+    &__label-checkbox {
+      position: relative;
+      padding-left: 34px;
+      text-transform: capitalize;
+  
+      @include responsive(xl){
+        cursor: pointer;
+      }
+  
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: -5px;
+        width: 20px;
+        height: 20px;
+        border-radius: 6px;
+        border: 1px solid #dedeea;
+        transition: 0.2s ease-out;
+      }
+      &::after {
+        content: "";
+        display: none;
+        position: absolute;
+        left: 7px;
+        top: -5px;
+        transform: rotate(45deg);
+        width: 3px;
+        height: 10px;
+        border: 3px solid;
+        border-color: transparent #dedeea #dedeea transparent;
+        transition: 0.2s ease-out;
+      }
+    }
+  
+    &__input[name="checkInput"]:checked + label::before {
+      background-color: #23d2e2;
+      border-color: #23d2e2;
+    }
+    &__input[name="checkInput"]:checked + label::after {
+      display: block;
+    }
+    &__label {
+      position: absolute;
+      top: 20px;
+      left: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #adafca;
+      padding: 0 6px;
+      transition-property: top, font-size;
+      transition: 0.2s ease-out;
+    }
+    .flex {
+      justify-content: space-between;
+      align-items: center;
+      height: 26px;
+  
+      .form__input-wrap {
+        width: max-content;
+      }
+    }
+    &__link {
+      color: #adafca;
+      text-decoration: none;
+      text-transform: capitalize;
+  
+      &:hover {
+        color: #00c7d9;
+      }
+    }
+    &__btn-submit {
+      min-height: 54px;
+      padding: 0 10px;
+      border-radius: 10px;
+      border: none;
+      color: #fff;
+      font-size: 14px;
+      box-shadow: 4px 7px 12px 0 rgba(97, 93, 250, 0.2);
+  
+      &--login {
+        background-color: #615dfa;
+  
+        &:hover {
+          background-color: #5753e4;
+        }
+      }
+      &--register {
+        background-color: #23d2e2;
+  
+        &:hover {
+          background-color: #1bc5d4;
+        }
+      }
+    }
+    &__footer {
+      position: relative;
+      text-align: center;
+      padding-top: 12px;
+  
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 19px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        z-index: 1;
+        background-color: #ddd;
+      }
+    }
+    &__sub-title {
+      position: relative;
+      padding: 0 6px;
+      background-color: #fff;
+      z-index: 1;
+    }
+    &__note {
+      font-weight: 500;
+      line-height: 24px;
+      text-align: justify;
+  
+      a {
+        color: rgb(0, 199, 217);
+        text-decoration: none;
+        font-weight: 600;
+      }
+    }
+  }
+  .sns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 12px;
+    margin-top: 30px;
+  
+    &__link {
+      display: block;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      border-radius: 10px;
+      color: #fff;
+      text-decoration: none;
+      transition: transform 0.2s ease-out;
+  
+      &--facebook {
+        background-color: #3763d2;
+      }
+      &--twitter {
+        background-color: #1abcff;
+      }
+      &--twitch {
+        background-color: #7b5dfa;
+      }
+      &--youtube {
+        background-color: #fd434f;
+      }
+  
+      &:hover {
+        transform: translateY(-4px);
+      }
+    }
+  }
+  
+  @include responsive(xl){
+    .box-bg{
+      width: 64%;
+      height: 140%;
+      border-radius: 50%;
+      background: url(../img/bg-dot.png) repeat 0 0 #fff;
+      position: absolute;
+      top: -20%;
+      right: -32%;
+    }
+  }
+  
+  
+  // keyframe
+  @keyframes fadeInRight {
+    0%{
+      opacity: 0;
+      visibility: hidden;
+      transform: translate(160%, -50%);
+    }
+    100%{
+      opacity: 1;
+      visibility: visible;
+      transform: translate(0, -50%);
+      z-index: 1;
+    }
+  }
+  @keyframes fadeOutRight {
+    0%{
+      opacity: 1;
+      visibility: visible;
+      transform: translate(0, -50%);
+    }
+    100%{
+      opacity: 0;
+      visibility: hidden;
+      transform: translate(160%, -50%);
+      z-index: -1;
+    }
+  }

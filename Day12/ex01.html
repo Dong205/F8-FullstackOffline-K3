@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="" rel="stylesheet" >
+    <title>[Clone] Vikinger | Day 12: SASS</title>
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="./css/index.css">
+  </head>
+  <body>
+    <main>
+      <input class="btn_checkbox" type="radio" name="btn" id="login" hidden checked>
+      <input class="btn_checkbox" type="radio" name="btn" id="register" hidden>
+      <div class="row">
+        <div class="col">
+          <div class="brand">
+            <div class="brand__logo">
+              <div class="brand__icon">
+                <img src="./img/logo.png" alt="VIKINGER" class="brand__icon-img">
+              </div>
+              <h1 class="brand__title">
+                <span class="brand__title-sm">Welcome to</span>
+                VIKINGER
+              </h1>
+            </div>
+            <p class="brand__desc">The next generation social network & community! Connect with your friends and play with our quests and badges gamification system!</p>
+            <div class="btn-box">
+              <label class="btn-box__btn" for="login">Login</label>
+              <label class="btn-box__btn" for="register">Register</label>
+            </div>
+          </div>
+          </div>
+        <div class="col">
+          <div class="form-wrap">
+            <!-- Login Form -->
+            <div class="form" id="loginForm">
+              <form class="form__login" action="https://api-gateway.fullstack.edu.vn/action_page.php" method="post">
+                <h2 class="form__title">Account Login</h2>
+                <label class="form__input-wrap" for="username">
+                  <input class="form__input" type="text" name="username" id="username" required autofocus>
+                  <span class="form__label">Username or Email</span>
+                </label>
+                <label class="form__input-wrap" for="password">
+                  <input class="form__input" type="password" name="password" id="password" required>
+                  <span class="form__label">Password</span>
+                </label>
+                <div class="flex">
+                  <input class="form__input" type="checkbox" name="checkInput" id="remember" checked hidden>
+                  <label class="form__input-wrap form__label-checkbox" for="remember">
+                    Remember Me
+                  </label>
+                  <a class="form__link" href="#!">Forgot Password?</a>
+                </div>
+                <button class="form__btn-submit form__btn-submit--login" type="submit">Login to your Account!</button>
+                <div class="form__footer">
+                  <strong class="form__sub-title">Login with your Social Account</strong>
+                  <ul class="sns">
+                    <li class="sns__item"><a href="#!" class="sns__link sns__link--facebook" title="facebook">f</a></li>
+                    <li class="sns__item"><a href="#!" class="sns__link sns__link--twitter" title="twitter">f</a></li>
+                    <li class="sns__item"><a href="#!" class="sns__link sns__link--twitch" title="twitch">f</a></li>
+                    <li class="sns__item"><a href="#!" class="sns__link sns__link--youtube" title="youtube">f</a></li>
+                  </ul>
+                </div>
+              </form>
+            </div>
+
+            <!-- Register Form -->
+            <div class="form" id="registerForm">
+              <form class="form__resister" id="formRegister" action="https://api-gateway.fullstack.edu.vn/action_page.php" method="post">
+                <h2 class="form__title">Create your Account!</h2>
+                <label class="form__input-wrap" for="email">
+                  <input class="form__input" type="email" name="email" id="email" required autofocus>
+                  <span class="form__label">Your Email</span>
+                </label>
+                <label class="form__input-wrap" for="username">
+                  <input class="form__input" type="text" name="username" id="username" required>
+                  <span class="form__label">Username</span>
+                </label>
+                <label class="form__input-wrap" for="password">
+                  <input class="form__input" type="password" name="password" id="password" required>
+                  <span class="form__label">Password</span>
+                </label>
+                <label class="form__input-wrap" for="retypePassword">
+                  <input class="form__input" type="password" name="retypePassword" id="retypePassword" required>
+                  <span class="form__label">Repeat Password</span>
+                </label>
+                <input class="form__input" type="checkbox" name="checkInput" id="registerNews" checked hidden>
+                <label class="form__input-wrap form__label-checkbox" for="registerNews">
+                  Send me news and updates via email
+                </label>
+                <button class="form__btn-submit form__btn-submit--register" type="submit">Register Now!</button>
+                <p class="form__note">You'll receive a confirmation email in your inbox with a link to activate your account. If you have any problems, <a href="#!">contact us</a>!</p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box-bg"></div>
+    </main>
+  </body>
+</html>
