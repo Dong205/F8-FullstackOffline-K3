@@ -1,0 +1,16 @@
+// Import Parts
+@import "parts/variables";
+@import "parts/reset";
+@import "parts/mixin";
+@import "parts/base";
+// Import Layouts
+@import "layouts/header";
+@import "layouts/hero";
+@import "layouts/quality";
+@import "layouts/products";
+@import "layouts/news";
+@import "layouts/protect";
+@import "layouts/certification";
+@import "layouts/form";
+
+@import "layouts/footer";
