@@ -10,13 +10,9 @@ class F8 {
                     const templateEL = document.createElement("template");
                     templateEL.innerHTML = template;
                     add.append(templateEL.content.cloneNode(true));
-                    // console.log(add);
                     if(name === "counter-app") {
-                        // console.log(this);
                         this.data = objs.data();
-                        // console.log(this.data);
                         add.querySelector("h2").textContent= this.data.title;
-                        // const countEL = add.querySelector(".count");
                         this.handleString();
                         this.actionClick();
                     
@@ -33,12 +29,8 @@ class F8 {
                     const eventEL = btn.getAttributeNames()[0];
                     const pos = eventEL.indexOf(":");
                     const event = eventEL.slice(pos+1);
-                    // console.log(event);
                     btn.addEventListener(event, () => {
                         eval(`this.data.` + value);
-                        // const countEL = add.querySelector(".count");
-                        // console.log(countEL);
-                        // console.log(countEL.textContent);
                         if(countEL.textContent.indexOf("{") !== -1) {
                             this.handleString();
                         } else {
@@ -47,7 +39,6 @@ class F8 {
                             var renderString = arrCount.join(" ");
                             countEL.innerText = renderString;
                         }
-                        // renderString = "";
                         const titleEl = add.querySelector("h2");
                         titleEl.textContent = this.data.title;
                     });
