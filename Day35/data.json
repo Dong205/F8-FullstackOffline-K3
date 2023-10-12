@@ -1,0 +1,22 @@
+{
+    "post": [
+      {
+        "id": 1,
+        "title": "The Lorem Ipsum for photos",
+        "image": "https://picsum.photos/200/300",
+        "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae qui quia dolores eveniet, voluptatem rem cumque magnam molestias hic. Sint, soluta iste. Consequatur minus quis placeat harum provident libero et."
+      },
+      {
+        "id": 2,
+        "title": "Israel tập kích căn cứ Hamas, Mỹ cố thiết lập hành lang nhân đạo ở Dải Gaza",
+        "image": "https://picsum.photos/200/300",
+        "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae qui quia dolores eveniet, voluptatem rem cumque magnam molestias hic. Sint, soluta iste. Consequatur minus quis placeat harum provident libero et."
+      },
+      {
+        "id": 3,
+        "title": "Hình ảnh thành trì Hamas đổ nát sau những trận không kích liên tiếp của Israel",
+        "image": "https://picsum.photos/200/300",
+        "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae qui quia dolores eveniet, voluptatem rem cumque magnam molestias hic. Sint, soluta iste. Consequatur minus quis placeat harum provident libero et."
+      }
+    ]
+  }
