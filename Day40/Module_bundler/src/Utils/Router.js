@@ -1,39 +1,36 @@
 import Navigo from "navigo";
+import { Error } from "../Errol";
 
-const app = document.querySelector("#App");
-const routerPage = new Navigo("/", { linksSelector: "a" });
+export const router = (routes, Layout) => {
+  const router = new Navigo("/", { linksSelector: "a" });
 
-const renderRouter = (app, html) => {
-  app.innerHTML = html;
-};
+  const render = (component, params) => {
+    const app = document.getElementById("app");
+    if (app) {
+      const bodyContent = component(params);
+      app.innerHTML = Layout({ body: bodyContent });
+    }
+  };
 
-window.navigate = (path) => routerPage.navigate(path);
+  const routesConfig = routes.reduce((config, route) => {
+    config[route.path] = (params) => {
+      render(route.component, params);
+    };
+    return config;
+  }, {});
 
-const renderHtml = (defaultLayout, componentPath, params) => {
-  const layout = defaultLayout() || "";
-  return layout.replace(/\{.*\}/g, componentPath(params));
-};
-
-const configureRoute = (path, component, defaultLayout) => {
-  routerPage.on(path, (params) => {
-    const html = renderHtml(defaultLayout, component, params);
-    renderRouter(app, html);
+  router.notFound(() => {
+    const app = document.getElementById("app");
+    app.innerHTML = Error();
   });
-};
 
-const setNotFoundPage = () => {
-  routerPage.notFound(() => {
-    const html = Error();
-    renderRouter(app, html);
-  });
-};
+  router.on(routesConfig).resolve();
 
-const startRouter = (routes, defaultLayout) => {
-  routes.forEach((route) => {
-    configureRoute(route.path, route.component, defaultLayout);
-  });
-  setNotFoundPage();
-  routerPage.resolve();
-};
+  const appRouter = {
+    navigate: (path) => router.navigate(path),
+  };
 
-export { routerPage, startRouter };
+  window.navigate = appRouter.navigate;
+
+  return appRouter;
+};
