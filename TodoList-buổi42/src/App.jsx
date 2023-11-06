@@ -1,7 +1,7 @@
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useState, useEffect } from "react";
-import Loading from "./Components/Loading";
+import Loading from "./Components/Loadings";
 import { TodoInner } from "../Components/TodoInner";
 import { handleLogin } from "./Components/HandleLogin";
 import { getApiKey } from "./js/todoApi";

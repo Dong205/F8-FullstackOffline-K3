@@ -9,7 +9,7 @@ import {
   postTodo,
   getTodo,
 } from "../js/todoApi";
-import { Loading } from "./Loading";
+import { Loading } from "./Loadings";
 import { toast } from "react-toastify";
 import { useDebounce } from "./Home";
 
