@@ -2,8 +2,8 @@ import React from "react";
 import { Divider, Box, Heading } from "@chakra-ui/react";
 import MAX_TIME from "../../config/config.js";
 import { useSelector } from "../../core/useSelector.js";
-import ResultTable from "../ResultTable/ResultTable.jsx";
-import Form from "../Form/Form.jsx";
+import ResultTable from "./ResultTable.jsx";
+import Form from "./Form.jsx";
 const Body = () => {
   const { state } = useSelector();
   const { timeCurrent } = state;
