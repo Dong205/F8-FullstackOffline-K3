@@ -1,8 +1,3 @@
-//Tư duy model
-/*
-Mỗi model tương ứng 1 table
-Trong 1 controller có thể có nhiều model
-*/
 const sql = require('../utils/db')
 module.exports = {
   all: (status, keyword) => {
@@ -44,4 +39,4 @@ module.exports = {
   delete: (id) => {
     return sql`DELETE FROM users WHERE id=${id}`
   }
-}
+};
