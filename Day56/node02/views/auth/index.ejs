@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="d-flex align-items-center justify-content-center flex-column" style="min-height: 100vh;">
+        <h2 class="fs-3 fw-bold mb-5">Authentication</h2>
+    
+        <div class="d-flex w-100 justify-content-between">
+            <a href="auth/login" class="btn btn-primary" style="width: calc((100% / 2) - 15px);">Login</a>
+            <a href="auth/registor" class="btn btn-primary" style="width: calc((100% / 2) - 15px);">Registor</a>
+        </div>
+    
+        <% if (registor) { %>
+            <div class="alert alert-success w-100 mt-3" role="alert">
+                <%= registor %>
+            </div>
+        <% } %>
+    </div>
+</body>
+</html>
