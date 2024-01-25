@@ -86,15 +86,6 @@ ALTER SEQUENCE public.users_id_seq OWNED BY public.users.id;
 ALTER TABLE ONLY public.users ALTER COLUMN id SET DEFAULT nextval('public.users_id_seq'::regclass);
 
 
---
--- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY public.users (id, username, password, created_at, updated_at) FROM stdin;
-1	duonghiep	$2b$10$bTHpX/u7VCXv6F5feYtVnuMvIBSH7uynqunnsPABYlJXv1nfHLlfG	2024-01-04 20:20:59.084322+07	2024-01-04 20:20:59.084322+07
-2	duonghiep123	$2b$10$7M6Zy90o/KCQEJC5tZRtWOiMNnn5iFoEsGWsCezMFBLXV/WXfzcmu	2024-01-04 20:22:11.458041+07	2024-01-04 20:22:11.458041+07
-\.
-
 
 --
 -- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres

@@ -205,15 +205,6 @@ COPY public.user_courses (id, user_id, course_id, created_at, updated_at) FROM s
 \.
 
 
---
--- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY public.users (id, name, email, status, created_at, updated_at) FROM stdin;
-2	User 2	user2@gmail.com	t	2023-12-24 20:41:37.486484+07	2023-12-24 20:41:37.486484+07
-8	duonghiep	duonghiep1403@gmail.com	t	2024-01-03 09:02:06.409011+07	2024-01-03 09:02:06.409011+07
-\.
-
 
 --
 -- Name: courses_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
